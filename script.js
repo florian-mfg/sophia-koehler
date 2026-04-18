@@ -26,9 +26,11 @@ sliders.forEach((slider) => {
     const mouseXInsideSlider = event.clientX - sliderBounds.left;
 
     if (mouseXInsideSlider < sliderBounds.width / 2) {
-      cursor.textContent = "←";
+      cursor.classList.add("is-left");
+      cursor.classList.remove("is-right");
     } else {
-      cursor.textContent = "→";
+      cursor.classList.add("is-right");
+      cursor.classList.remove("is-left");
     }
 
     if (!isDown) return;

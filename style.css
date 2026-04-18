@@ -37,7 +37,7 @@ a {
 }
 
 .page-content {
-  padding: 4.5rem 0 8rem 0;
+  padding: 4rem 0 8rem 0;
 }
 
 /* =========================
@@ -50,13 +50,24 @@ a {
   left: 0;
   z-index: 9999;
   pointer-events: none;
-  transform: translate(-50%, -50%);
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2rem;
-  line-height: 1;
   display: none;
   mix-blend-mode: difference;
-  color: white;
+  transform: translate(-50%, -50%) scaleX(-1);
+  transform-origin: center;
+}
+
+.custom-cursor.is-left {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+.custom-cursor.is-right {
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.custom-cursor img {
+  display: block;
+  width: 2.8rem;
+  height: auto;
 }
 
 /* =========================
@@ -72,47 +83,56 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem;
-  padding: 0.75rem 0.75rem 0 0.75rem;
+  gap: 1.35rem;
+  padding: 0.55rem 0.45rem 0 0.35rem;
   mix-blend-mode: difference;
   color: white;
+  /* outline: 1px solid red; */
 }
 
 .logo {
   display: flex;
   align-items: flex-start;
-  gap: 0.35rem;
+  gap: 1rem;
   flex-shrink: 0;
+  white-space: nowrap;
+  /* outline: 1px solid red; */
 }
 
 .logo-mark {
-  font-size: 2rem;
-  line-height: 0.9;
+  font-size: 2.9rem;
+  line-height: 0.8;
   font-weight: 500;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.08em;
+  /* outline: 1px solid yellow; */
 }
 
 .logo-subtitle {
-  font-size: 0.45rem;
-  line-height: 1.1;
-  margin-top: 0.22rem;
-  letter-spacing: -0.02em;
+  font-size: 0.95rem;
+  line-height: 0.9;
+  margin-top: 0;
+  letter-spacing: -0.05em;
+  align-self: flex-start;
+  /* outline: 1px solid green; */
 }
 
 .main-nav {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 0.8rem;
+  flex-wrap: nowrap;
   justify-content: flex-end;
+  white-space: nowrap;
+  /* outline: 1px solid currentColor; */
 }
 
 .main-nav a {
-  font-size: clamp(1.2rem, 2.6vw, 2.6rem);
-  line-height: 0.95;
+  font-size: 0.95rem;
+  line-height: 0.9;
   text-transform: uppercase;
   transition: font-family 0.15s ease;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
+  /* outline: 1px solid currentColor; */
 }
 
 .main-nav a:hover {
@@ -143,6 +163,8 @@ a {
 .section-count {
   margin: 0;
   white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 
 .section-info,
@@ -190,12 +212,8 @@ a {
   height: 260px;
 }
 
-.slider-section:nth-of-type(3) .art-slider img {
+.slider-section-medium .art-slider img {
   height: 135px;
-}
-
-.slider-section:nth-of-type(4) .art-slider img {
-  height: 110px;
 }
 
 /* Einzelne Bilder individuell skalierbar */
@@ -233,24 +251,28 @@ a {
 
 @media (min-width: 768px) {
   .page-content {
-    padding-top: 5.25rem;
+    padding-top: 4.6rem;
   }
 
   .site-header {
-    padding: 1rem 1rem 0 1rem;
+    padding: 0.7rem 0.7rem 0 0.55rem;
   }
 
   .logo-mark {
-    font-size: 2.4rem;
+    font-size: 4.4rem;
   }
 
   .logo-subtitle {
-    font-size: 0.52rem;
-    margin-top: 0.28rem;
+    font-size: 1.2rem;
+    margin-top: 0;
   }
 
   .main-nav {
-    gap: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .main-nav a {
+    font-size: 1.2rem;
   }
 
   .section-meta {
@@ -275,12 +297,8 @@ a {
     height: 460px;
   }
 
-  .slider-section:nth-of-type(3) .art-slider img {
+  .slider-section-medium .art-slider img {
     height: 210px;
-  }
-
-  .slider-section:nth-of-type(4) .art-slider img {
-    height: 170px;
   }
 
   .art-slider img.is-tall {
@@ -302,15 +320,32 @@ a {
 
 @media (min-width: 1200px) {
   .page-content {
-    padding-top: 5.75rem;
+    padding-top: 5rem;
   }
 
   .site-header {
-    padding: 1rem 1rem 0 1rem;
+    padding: 0.8rem 0.9rem 0 0.65rem;
+  }
+
+  .logo-mark {
+    font-size: 5.4rem;
+  }
+
+  .logo-subtitle {
+    font-size: 1.45rem;
+    margin-top: 0;
   }
 
   .section-meta {
     font-size: 0.78rem;
+  }
+
+  .main-nav {
+    gap: 1.45rem;
+  }
+
+  .main-nav a {
+    font-size: 1.45rem;
   }
 
   .art-slider-track {
@@ -326,12 +361,8 @@ a {
     height: 620px;
   }
 
-  .slider-section:nth-of-type(3) .art-slider img {
+  .slider-section-medium .art-slider img {
     height: 260px;
-  }
-
-  .slider-section:nth-of-type(4) .art-slider img {
-    height: 210px;
   }
 
   .art-slider img.is-tall {
