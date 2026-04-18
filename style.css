@@ -135,8 +135,21 @@ a {
   /* outline: 1px solid currentColor; */
 }
 
+.main-nav a.is-active {
+  font-family: "Times New Roman", Times, serif;
+}
+
 .main-nav a:hover {
   font-family: "Times New Roman", Times, serif;
+}
+
+.mobile-menu-link {
+  display: none;
+}
+
+.info-page .site-header {
+  mix-blend-mode: normal;
+  color: #000;
 }
 
 /* =========================
@@ -163,8 +176,10 @@ a {
 .section-count {
   margin: 0;
   white-space: nowrap;
-  font-weight: 600;
-  font-size: 0.8rem;
+  font-weight: 200;
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
 }
 
 .section-info,
@@ -246,6 +261,95 @@ a {
 }
 
 /* =========================
+   INFO PAGE
+========================= */
+
+.info-page-content {
+  padding: 6.25rem 0.75rem 4rem 0.75rem;
+}
+
+.info-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.info-column {
+  min-width: 0;
+}
+
+.info-block + .info-block {
+  margin-top: 1.7rem;
+}
+
+.info-block-statement .info-copy + .info-copy {
+  margin-top: 0.55rem;
+}
+
+.info-heading,
+.info-copy {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.info-heading {
+  text-transform: uppercase;
+}
+
+.info-copy a {
+  text-decoration: none;
+}
+
+/* =========================
+   MENU PAGE
+========================= */
+
+.menu-page-content {
+  min-height: 100vh;
+  padding: 6.25rem 0.75rem 2rem 0.75rem;
+}
+
+.menu-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.menu-panel-link {
+  font-size: clamp(2.6rem, 14vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+}
+
+.menu-panel-link:hover {
+  font-family: "Times New Roman", Times, serif;
+}
+
+@media (max-width: 599px) {
+  .desktop-nav-link {
+    display: none;
+  }
+
+  .mobile-menu-link {
+    display: inline-block;
+  }
+
+  .menu-page .mobile-menu-link {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .menu-panel {
+    margin-top: 1.5rem;
+  }
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -316,6 +420,24 @@ a {
   .site-footer {
     padding: 12rem 1rem 3rem 1rem;
   }
+
+  .info-page-content {
+    padding: 8rem 1rem 4rem 1rem;
+  }
+
+  .menu-page-content {
+    padding: 8rem 1rem 3rem 1rem;
+  }
+
+  .info-layout {
+    grid-template-columns: minmax(16rem, 1fr) minmax(24rem, 1.6fr);
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .info-block + .info-block {
+    margin-top: 2rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -375,5 +497,32 @@ a {
 
   .art-slider img.is-small {
     height: 150px;
+  }
+
+  .info-page-content {
+    padding: 10.5rem 1.2rem 5rem 1.2rem;
+  }
+
+  .menu-page-content {
+    padding: 10.5rem 1.2rem 4rem 1.2rem;
+  }
+
+  .info-layout {
+    grid-template-columns: minmax(24rem, 44rem) minmax(36rem, 1fr);
+    gap: 4.5rem;
+  }
+
+  .info-block + .info-block {
+    margin-top: 2.35rem;
+  }
+
+  .info-heading,
+  .info-copy {
+    font-size: 1.12rem;
+    line-height: 1.08;
+  }
+
+  .menu-panel-link {
+    font-size: 5.6rem;
   }
 }
