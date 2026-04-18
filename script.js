@@ -1,5 +1,6 @@
 const sliders = document.querySelectorAll(".art-slider");
 const cursor = document.getElementById("customCursor");
+const closeMenuLink = document.querySelector("[data-close-menu]");
 
 sliders.forEach((slider) => {
   let isDown = false;
@@ -86,4 +87,13 @@ function isTouchDevice() {
 
 if (isTouchDevice()) {
   cursor.style.display = "none";
+}
+
+if (closeMenuLink) {
+  closeMenuLink.addEventListener("click", (event) => {
+    if (window.history.length > 1) {
+      event.preventDefault();
+      window.history.back();
+    }
+  });
 }
