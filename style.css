@@ -13,10 +13,12 @@ html {
 }
 
 body {
+  --nav-block-width: 18.5rem;
+  --page-edge: 0.75rem;
   margin: 0;
   background: white;
   color: #000;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -84,9 +86,10 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1.35rem;
-  padding: 0.55rem 0.45rem 0 0.35rem;
+  padding: 0.55rem var(--page-edge) 0 0.35rem;
   mix-blend-mode: difference;
   color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* outline: 1px solid red; */
 }
 
@@ -102,7 +105,7 @@ a {
 .logo-mark {
   font-size: 2.9rem;
   line-height: 0.8;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.08em;
   /* outline: 1px solid yellow; */
 }
@@ -136,7 +139,7 @@ a {
 }
 
 .main-nav a.is-active {
-  font-family: "Times New Roman", Times, serif;
+  font-family: inherit;
 }
 
 .main-nav a:hover {
@@ -166,8 +169,8 @@ a {
 
 .section-meta {
   display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 0.1rem 0.75rem;
   align-items: start;
   padding: 0 0.75rem 0.35rem 0.75rem;
   font-size: 0.55rem;
@@ -176,8 +179,7 @@ a {
 }
 
 .section-title,
-.section-info,
-.section-count {
+.section-info {
   margin: 0;
   white-space: nowrap;
   font-weight: 200;
@@ -186,9 +188,47 @@ a {
   color: black;
 }
 
-.section-info,
-.section-count {
-  text-align: right;
+.section-title,
+.section-info {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section-info {
+  grid-column: 1;
+  text-align: left;
+}
+
+.section-project-link {
+  display: flex;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  align-self: end;
+  width: 4.15rem;
+  height: 1rem;
+  margin-bottom: 0.02rem;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.section-project-link:hover {
+  background: #fff;
+  color: #000;
+}
+
+.section-project-link.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* =========================
@@ -265,6 +305,7 @@ a {
 
 .site-footer-title {
   margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(2.5rem, 8vw, 5.5rem);
   line-height: 0.95;
   letter-spacing: -0.07em;
@@ -433,7 +474,7 @@ a {
   }
 
   .menu-page .mobile-menu-link {
-    font-family: "Times New Roman", Times, serif;
+    font-family: inherit;
   }
 
   .menu-panel {
@@ -446,6 +487,11 @@ a {
 ========================= */
 
 @media (min-width: 768px) {
+  body {
+    --nav-block-width: 22.5rem;
+    --page-edge: 0.7rem;
+  }
+
   .page-content > .slider-section:first-child {
     margin-top: 2.5rem;
   }
@@ -455,7 +501,7 @@ a {
   }
 
   .site-header {
-    padding: 0.7rem 0.7rem 0 0.55rem;
+    padding: 0.7rem var(--page-edge) 0 0.55rem;
   }
 
   .logo-mark {
@@ -469,6 +515,8 @@ a {
 
   .main-nav {
     gap: 1.2rem;
+    width: var(--nav-block-width);
+    justify-content: flex-start;
   }
 
   .main-nav a {
@@ -476,8 +524,20 @@ a {
   }
 
   .section-meta {
-    padding: 0 1rem 0.5rem 1rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, calc(var(--nav-block-width) - 4.15rem - 1rem)) max-content;
+    gap: 1rem;
+    padding: 0 var(--page-edge) 0.5rem 1rem;
     font-size: 0.7rem;
+  }
+
+  .section-info {
+    grid-column: 2;
+  }
+
+  .section-project-link {
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 1rem;
   }
 
   .art-slider {
@@ -565,6 +625,11 @@ a {
 /* Abstand index zu erstem Imageslider */
 
 @media (min-width: 1200px) {
+  body {
+    --nav-block-width: 28rem;
+    --page-edge: 0.9rem;
+  }
+
   .page-content > .slider-section:first-child {
     margin-top: 2.5rem;
   }
@@ -574,7 +639,7 @@ a {
   }
 
   .site-header {
-    padding: 0.8rem 0.9rem 0 0.65rem;
+    padding: 0.8rem var(--page-edge) 0 0.65rem;
   }
 
   .logo-mark {
@@ -587,7 +652,13 @@ a {
   }
 
   .section-meta {
+    grid-template-columns: minmax(0, 1fr) minmax(0, calc(var(--nav-block-width) - 4.15rem - 1.2rem)) max-content;
+    gap: 1.2rem;
     font-size: 0.78rem;
+  }
+
+  .section-project-link {
+    font-size: 1rem;
   }
 
   .main-nav {
