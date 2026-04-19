@@ -114,7 +114,7 @@ a {
   font-size: 0.95rem;
   line-height: 0.9;
   margin-top: 0;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.03em;
   align-self: flex-start;
   /* outline: 1px solid green; */
 }
@@ -134,7 +134,7 @@ a {
   line-height: 0.9;
   text-transform: uppercase;
   transition: font-family 0.15s ease;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.03em;
   /* outline: 1px solid currentColor; */
 }
 
@@ -428,6 +428,7 @@ a {
 }
 
 .menu-panel-link {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(1.3rem, 7vw, 2.5rem);
   line-height: 0.9;
   letter-spacing: -0.07em;
@@ -435,7 +436,7 @@ a {
 }
 
 .menu-panel-link:hover {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* =========================
