@@ -617,6 +617,13 @@ a {
   font-weight: 400;
 }
 
+.container-lecture-page .research-title,
+.container-lecture-page .research-year,
+.lecture-performance-page .research-title,
+.lecture-performance-page .research-year {
+  font-family: "Times New Roman", Times, serif;
+}
+
 .research-copy-block {
   max-width: 31rem;
   margin-bottom: 4.2rem;
@@ -640,7 +647,7 @@ a {
 }
 
 .research-figure + .research-figure {
-  margin-top: 4.6rem;
+  margin-top: 1.6rem;
 }
 
 .research-figure img {
@@ -720,6 +727,20 @@ a {
 
   .research-project {
     width: min(39rem, 42vw);
+  }
+
+  .research-figure-desktop-wide,
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-1.jpg"]),
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-2.jpg"]),
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-3.jpg"]),
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-4.jpg"]),
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-5.jpg"]),
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-6.jpg"]),
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-7.jpg"]),
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-8.jpg"]),
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-9.jpg"]),
+  .container-lecture-page .research-figure:has(img[src$="/sk-research-container-10.jpg"]) {
+    width: 60vw;
   }
 
   .logo-subtitle {
