@@ -15,6 +15,11 @@ html {
 body {
   --nav-block-width: 18.5rem;
   --page-edge: 0.75rem;
+  --logo-left: 0.35rem;
+  --logo-top: 0.55rem;
+  --logo-mark-size: 2.9rem;
+  --logo-subtitle-gap: 0.25rem;
+  --logo-subtitle-left: calc(var(--logo-left) + (var(--logo-mark-size) * 1.2) + var(--logo-subtitle-gap));
   margin: 0;
   background: white;
   color: #000;
@@ -86,7 +91,7 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1.35rem;
-  padding: 0.55rem var(--page-edge) 0 0.35rem;
+  padding: var(--logo-top) var(--page-edge) 0 var(--logo-left);
   mix-blend-mode: difference;
   color: white;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -103,7 +108,7 @@ a {
 }
 
 .logo-mark {
-  font-size: 2.9rem;
+  font-size: var(--logo-mark-size);
   line-height: 0.8;
   font-weight: 400;
   letter-spacing: -0.08em;
@@ -117,6 +122,28 @@ a {
   letter-spacing: -0.03em;
   align-self: flex-start;
   /* outline: 1px solid green; */
+}
+
+.logo-subtitle-link {
+  position: absolute;
+  top: var(--logo-top);
+  left: var(--logo-subtitle-left);
+  z-index: 8999;
+  display: block;
+  white-space: nowrap;
+  mix-blend-mode: difference;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.info-page .logo-subtitle-link {
+  mix-blend-mode: normal;
+  color: #000;
+}
+
+.info-main-page .logo-subtitle-link {
+  mix-blend-mode: difference;
+  color: #fff;
 }
 
 .main-nav {
@@ -401,6 +428,11 @@ a {
   color: #fff;
 }
 
+.menu-page .logo-subtitle-link {
+  mix-blend-mode: normal;
+  color: #fff;
+}
+
 .menu-page .site-footer {
   color: #fff;
 }
@@ -659,6 +691,10 @@ a {
   body {
     --nav-block-width: 22.5rem;
     --page-edge: 0.7rem;
+    --logo-left: 0.55rem;
+    --logo-top: 0.7rem;
+    --logo-mark-size: 4.4rem;
+    --logo-subtitle-gap: 0.8rem;
   }
 
   .page-content > .slider-section:first-child {
@@ -667,10 +703,6 @@ a {
 
   .page-content {
     padding-top: 4.6rem;
-  }
-
-  .site-header {
-    padding: 0.7rem var(--page-edge) 0 0.55rem;
   }
 
   .research-close-link {
@@ -688,10 +720,6 @@ a {
 
   .research-project {
     width: min(39rem, 42vw);
-  }
-
-  .logo-mark {
-    font-size: 4.4rem;
   }
 
   .logo-subtitle {
@@ -847,6 +875,9 @@ a {
   body {
     --nav-block-width: 28rem;
     --page-edge: 0.9rem;
+    --logo-left: 0.65rem;
+    --logo-top: 0.8rem;
+    --logo-mark-size: 5.4rem;
   }
 
   .page-content > .slider-section:first-child {
@@ -855,10 +886,6 @@ a {
 
   .page-content {
     padding-top: 5rem;
-  }
-
-  .site-header {
-    padding: 0.8rem var(--page-edge) 0 0.65rem;
   }
 
   .research-close-link {
@@ -876,10 +903,6 @@ a {
 
   .research-project {
     width: min(43rem, 42vw);
-  }
-
-  .logo-mark {
-    font-size: 5.4rem;
   }
 
   .logo-subtitle {
