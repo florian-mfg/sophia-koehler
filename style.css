@@ -717,7 +717,8 @@ a {
 
   .research-close-link {
     top: 0.7rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .research-project-header {
@@ -916,7 +917,8 @@ a {
 
   .research-close-link {
     top: 0.8rem;
-    font-size: 1.45rem;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .research-project-header {
