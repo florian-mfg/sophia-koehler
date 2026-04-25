@@ -117,6 +117,7 @@ a {
 
 .logo-subtitle {
   font-size: 0.95rem;
+  font-weight: 500;
   line-height: 0.9;
   margin-top: 0;
   letter-spacing: -0.03em;
@@ -158,6 +159,7 @@ a {
 
 .main-nav a {
   font-size: 0.95rem;
+  font-weight: 500;
   line-height: 0.9;
   text-transform: uppercase;
   transition: font-family 0.15s ease;
@@ -171,6 +173,7 @@ a {
 
 .main-nav a:hover {
   font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
 }
 
 .mobile-menu-link {
@@ -744,7 +747,8 @@ a {
   }
 
   .logo-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
     margin-top: 0;
   }
 
@@ -755,7 +759,8 @@ a {
   }
 
   .main-nav a {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .section-meta {
@@ -927,7 +932,8 @@ a {
   }
 
   .logo-subtitle {
-    font-size: 1.45rem;
+    font-size: 1rem;
+    font-weight: 500;
     margin-top: 0;
   }
 
@@ -946,7 +952,8 @@ a {
   }
 
   .main-nav a {
-    font-size: 1.45rem;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .art-slider-track {
