@@ -20,6 +20,8 @@ body {
   --logo-mark-size: 2.9rem;
   --logo-subtitle-gap: 0.25rem;
   --logo-subtitle-left: calc(var(--logo-left) + (var(--logo-mark-size) * 1.2) + var(--logo-subtitle-gap));
+  --times-letter-spacing: 0;
+  --times-word-spacing: 0.03em;
   margin: 0;
   background: white;
   color: #000;
@@ -174,6 +176,8 @@ a {
 .main-nav a:hover {
   font-family: "Times New Roman", Times, serif;
   font-weight: 500;
+  letter-spacing: var(--times-letter-spacing);
+  word-spacing: var(--times-word-spacing);
 }
 
 .mobile-menu-link {
@@ -221,6 +225,8 @@ a {
   font-weight: 200;
   font-size: 1rem;
   font-family: 'Times New Roman', Times, serif;
+  letter-spacing: var(--times-letter-spacing);
+  word-spacing: var(--times-word-spacing);
   color: black;
 }
 
@@ -254,7 +260,8 @@ a {
   font-size: 1rem;
   font-weight: 400;
   line-height: 0.9;
-  letter-spacing: 0;
+  letter-spacing: var(--times-letter-spacing);
+  word-spacing: var(--times-word-spacing);
 }
 
 .section-project-link:hover {
@@ -366,7 +373,8 @@ a {
   font-family: "Times New Roman", Times, serif;
   font-size: 1rem;
   line-height: 0.95;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--times-letter-spacing);
+  word-spacing: var(--times-word-spacing);
 }
 
 .site-footer-link:hover {
@@ -406,7 +414,8 @@ a {
   font-size: 1rem;
   line-height: 1.1;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--times-letter-spacing);
+  word-spacing: var(--times-word-spacing);
 }
 
 .info-heading {
@@ -544,7 +553,8 @@ a {
   font-family: "Times New Roman", Times, serif;
   font-size: 1rem;
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--times-letter-spacing);
+  word-spacing: var(--times-word-spacing);
   font-weight: 400;
 }
 
@@ -588,6 +598,8 @@ a {
 
 .research-close-link:hover {
   font-family: "Times New Roman", Times, serif;
+  letter-spacing: var(--times-letter-spacing);
+  word-spacing: var(--times-word-spacing);
 }
 
 .research-page-content {
@@ -625,6 +637,8 @@ a {
 .lecture-performance-page .research-title,
 .lecture-performance-page .research-year {
   font-family: "Times New Roman", Times, serif;
+  letter-spacing: var(--times-letter-spacing);
+  word-spacing: var(--times-word-spacing);
 }
 
 .research-copy-block {
@@ -638,7 +652,8 @@ a {
   font-size: 1rem;
   line-height: 1.1;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--times-letter-spacing);
+  word-spacing: var(--times-word-spacing);
 }
 
 .research-copy-block p + p {
